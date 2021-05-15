@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/ceciEstLeBouttonDesVraisGuerriers"
+        android:layout_width="218dp"
+        android:layout_height="177dp"
+        android:layout_marginBottom="24dp"
+        android:text="Oui je me balance..."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/affSouthPark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cacher ou ne pas cacher ? Telle est la question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewDesVraisGuerriers"
+        android:layout_width="193dp"
+        android:layout_height="235dp"
+        android:layout_marginTop="256dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/affSouthPark"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/culteDeKenny"
+        android:layout_width="267dp"
+        android:layout_height="62dp"
+        android:text="oh mon dieu ils ont tué kenny especes d'enfoirés"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewDesVraisGuerriers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/affSouthPark"
+        app:layout_constraintVertical_bias="0.24" />
+
+    <EditText
+        android:id="@+id/enteringofPW"
+        android:layout_width="317dp"
+        android:layout_height="35dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewDesVraisGuerriers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/culteDeKenny"
+        app:layout_constraintVertical_bias="0.284" />
+
+    <EditText
+        android:id="@+id/enteringDeTousLesVraisGuerriers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewDesVraisGuerriers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enteringofPW"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
