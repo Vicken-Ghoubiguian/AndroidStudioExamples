@@ -63,4 +63,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/check_3" />
 
+    <TextView
+        android:id="@+id/extraitsDeTextes"
+        android:layout_width="158dp"
+        android:layout_height="73dp"
+        android:text="Ceci est un test...."
+        app:layout_constraintBottom_toTopOf="@+id/switchForHiding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
