@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textToSay"
+        app:layout_constraintTop_toBottomOf="@+id/textToSayEntry"
         app:layout_constraintVertical_bias="0.478" />
 
     <RadioGroup
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/textToSay"
+        android:id="@+id/textToSayEntry"
         android:layout_width="311dp"
         android:layout_height="58dp"
         android:layout_marginTop="100dp"
