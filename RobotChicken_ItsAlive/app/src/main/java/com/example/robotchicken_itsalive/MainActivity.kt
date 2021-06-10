@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private var tts: TextToSpeech? = null
     private var validationButton: Button? = null
     private var textToSayEntry: EditText? = null
+    private var locale: String = "en-us"
 
     // Overriden function to create the main activity...
     override fun onCreate(savedInstanceState: Bundle?) {
