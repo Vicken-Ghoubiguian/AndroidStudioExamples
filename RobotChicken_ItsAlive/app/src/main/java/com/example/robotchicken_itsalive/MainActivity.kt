@@ -29,7 +29,18 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         setContentView(R.layout.activity_main)
 
         //
+        this.textToSayEntry = findViewById(R.id.textToSayEntry)
 
+        //
+        this.tts = TextToSpeech(this, this)
+
+        //
+        this.validationButton = findViewById(R.id.validationButton)
+        this.validationButton!!.setOnClickListener {
+
+            val textToSay = this.textToSayEntry!!.text.toString()
+            this.tts!!.speak("Nique ta mére", TextToSpeech.QUEUE_FLUSH, null, "")
+        }
     }
 
     //
