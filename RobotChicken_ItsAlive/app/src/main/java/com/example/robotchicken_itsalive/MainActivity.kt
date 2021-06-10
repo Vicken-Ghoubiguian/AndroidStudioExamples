@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 
 // Definition of the 'MainActivity' class which define the main activity controller...
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     // Declaration of all elements for this little Android app...
     private var tts: TextToSpeech? = null
@@ -23,6 +23,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //
+
+    }
+
+    //
+    override fun onInit(status: Int) {
 
     }
 
