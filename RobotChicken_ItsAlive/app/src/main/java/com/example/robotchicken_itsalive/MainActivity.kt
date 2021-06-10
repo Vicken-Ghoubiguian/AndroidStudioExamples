@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         this.validationButton!!.setOnClickListener {
 
             val textToSay = this.textToSayEntry!!.text.toString()
-            this.tts!!.speak("Nique ta mére", TextToSpeech.QUEUE_FLUSH, null, "")
+            this.tts!!.speak(textToSay, TextToSpeech.QUEUE_FLUSH, null, "")
         }
     }
 
