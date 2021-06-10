@@ -38,35 +38,39 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         this.validationButton = findViewById(R.id.validationButton)
         this.validationButton!!.setOnClickListener {
 
+            // Retrieve the value entered in 'textToSay' Entry and convert to String, then make it say...
             val textToSay = this.textToSayEntry!!.text.toString()
             this.tts!!.speak(textToSay, TextToSpeech.QUEUE_FLUSH, null, "")
         }
     }
 
-    //
+    // Overriden function to initialize the TTS attribute of the main activity...
     override fun onInit(status: Int) {
 
         //
         if (status == TextToSpeech.SUCCESS) {
 
-            // set US English as language for tts
+            // Set US English as language for tts
             val result = tts!!.setLanguage(Locale.US)
 
             //
             if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
 
-                Log.e("TTS","The Language specified is not supported!")
+                // Display a log about TTS saying that the language specified is not supported...
+                Log.e("TTS","The Language specified is not supported !")
 
             // In the other case...
             } else {
 
+                // The validation button is enabled...
                 validationButton!!.isEnabled = true
             }
 
         // In the other case...
         } else {
 
-            Log.e("TTS", "Initilization Failed!")
+            // Display a log about TTS saying that the initialization failed...
+            Log.e("TTS", "Initilization Failed !")
         }
     }
 
@@ -75,6 +79,8 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         // Shutdown TTS (which is also an attribute of the 'MainActivity' class)...
         if (this.tts != null) {
+
+            //
             this.tts!!.stop()
             this.tts!!.shutdown()
         }
