@@ -28,13 +28,13 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //
+        // Initialization of the text to say entry...
         this.textToSayEntry = findViewById(R.id.textToSayEntry)
 
-        //
+        // Initialization of the Text to Speech (TTS) object...
         this.tts = TextToSpeech(this, this)
 
-        //
+        // Initialization of the validation button and its onClick listener...
         this.validationButton = findViewById(R.id.validationButton)
         this.validationButton!!.setOnClickListener {
 
@@ -46,17 +46,26 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     //
     override fun onInit(status: Int) {
 
+        //
         if (status == TextToSpeech.SUCCESS) {
+
             // set US English as language for tts
             val result = tts!!.setLanguage(Locale.US)
 
+            //
             if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+
                 Log.e("TTS","The Language specified is not supported!")
+
+            // In the other case...
             } else {
+
                 validationButton!!.isEnabled = true
             }
 
+        // In the other case...
         } else {
+
             Log.e("TTS", "Initilization Failed!")
         }
     }
