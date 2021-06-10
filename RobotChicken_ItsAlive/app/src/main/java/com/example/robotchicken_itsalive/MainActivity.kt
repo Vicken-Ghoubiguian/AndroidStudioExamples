@@ -25,4 +25,17 @@ class MainActivity : AppCompatActivity() {
         //
 
     }
+
+    // Overriden function to destroy the main activity...
+    public override fun onDestroy() {
+
+        // Shutdown TTS (which is also an attribute of the 'MainActivity' class)...
+        if (this.tts != null) {
+            this.tts!!.stop()
+            this.tts!!.shutdown()
+        }
+
+        // Destroy the activity...
+        super.onDestroy()
+    }
 }
